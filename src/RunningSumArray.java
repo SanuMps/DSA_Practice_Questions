@@ -17,6 +17,15 @@ public class RunningSumArray {
         return result;
     }
 
+    //Another approvh : Overwritten approch
+
+    public int[] RunningSumOfArr(int[] num) {
+        for (int i = 1; i < num.length; i++) {
+            num[i] += num[i - 1];
+        }
+        return num;
+    }
+
 
     public static void test(String[] args) {
         RunningSum run = new RunningSum();
@@ -24,7 +33,6 @@ public class RunningSumArray {
         int[] nums = {1, 2, 3, 4};
         int[] result = run.RunningSumOfArray(nums);
 
-        // Print the result
         for (int i : result) {
             System.out.print(i + " ");
         }
