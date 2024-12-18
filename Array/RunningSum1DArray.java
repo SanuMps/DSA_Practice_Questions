@@ -6,7 +6,7 @@
 // If array is given ar = { 1,5,6,8,9}. What will be the running sum of it.
 // ANS: ar = {1,6,12,20,29}
 
-public class RunningSumArray {
+public class RunningSum1DArray {
 
     public int[] RunningSumOfArray(int[] num) {
         int[] result = new int[num.length];
@@ -18,23 +18,10 @@ public class RunningSumArray {
     }
 
     //Another approvh : Overwritten approch
-
     public int[] RunningSumOfArr(int[] num) {
         for (int i = 1; i < num.length; i++) {
             num[i] += num[i - 1];
         }
         return num;
-    }
-
-
-    public static void test(String[] args) {
-        RunningSum run = new RunningSum();
-
-        int[] nums = {1, 2, 3, 4};
-        int[] result = run.RunningSumOfArray(nums);
-
-        for (int i : result) {
-            System.out.print(i + " ");
-        }
     }
 }
